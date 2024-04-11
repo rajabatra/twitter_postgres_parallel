@@ -37,6 +37,7 @@ def remove_nulls(s):
     else:
         return s.replace('\x00','\\x00')
 
+
 def batch(iterable, n=1):
     '''
     Group an iterable into batches of size n.
@@ -297,7 +298,7 @@ def _insert_tweets(connection,input_tweets):
             id_urls = url['expanded_url']
             tweet_urls.append({
                 'id_tweets':tweet['id'],
-                'url':remove_nulls(id_urls),
+                'id_urls':remove_nulls(id_urls),
                 })
 
         ########################################
